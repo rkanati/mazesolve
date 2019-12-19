@@ -1,0 +1,22 @@
+[package]
+name    = "mazesolve-rk"
+version = "0.1.0"
+authors = ["Rachel K <raech.kanati@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+priority-queue = "0.6"
+pcg_rand       = "0.11"
+rand           = "0.7"
+
+[dependencies.image]
+version          = "0.22"
+default-features = false
+features         = ["gif_codec", "png_codec", "tga", "bmp"]
+
+[profile.release]
+opt-level   = 3
+debug       = false
+lto         = 'thin'
+incremental = false
+
